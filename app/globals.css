@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #030711; color: white; font-family: Arial, Helvetica, sans-serif; }
+html { scroll-behavior: smooth; }
+
+.space-bg {
+  background:
+    radial-gradient(circle at 72% 20%, rgba(0, 184, 255, .25), transparent 26%),
+    radial-gradient(circle at 45% 55%, rgba(0, 84, 255, .16), transparent 26%),
+    linear-gradient(180deg, #02050e 0%, #061225 58%, #02050e 100%);
+}
+.space-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#22c6ff 1px, transparent 1px), radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 74px 74px, 131px 131px;
+  background-position: 0 0, 34px 52px;
+  opacity: .16;
+}
+.glass {
+  background: linear-gradient(145deg, rgba(8, 25, 55, .82), rgba(3, 11, 27, .72));
+  border: 1px solid rgba(0, 184, 255, .24);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.03) inset, 0 25px 80px rgba(0,0,0,.38);
+  backdrop-filter: blur(16px);
+}
+.blue-text { background: linear-gradient(90deg, #00d4ff, #2478ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.earth { position:absolute; left:0; right:0; bottom:-140px; height:320px; border-radius: 50% 50% 0 0; background: radial-gradient(ellipse at center top, rgba(0,212,255,.75), rgba(13,44,90,.18) 34%, transparent 66%); filter: blur(1px); opacity:.76; }
+.grid-lines { background-image: linear-gradient(rgba(0,184,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(0,184,255,.12) 1px, transparent 1px); background-size: 44px 44px; }
